@@ -1,7 +1,3 @@
-# Redirect to /autodiscover
-RewriteEngine On
-RewriteRule ^$ /autodiscover [L]
-
 # Deny access to dot files
 <FilesMatch "^\.">
 Order allow,deny
