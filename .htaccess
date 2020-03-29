@@ -1,0 +1,15 @@
+# Redirect to /autodiscover
+RewriteEngine On
+RewriteRule ^$ /autodiscover [L]
+
+# Deny access to dot files
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Deny access to files
+<FilesMatch "^(vendor|composer.json|composer.lock|README.md)*$">
+Order allow,deny
+Deny from all
+</FilesMatch>
